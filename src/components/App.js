@@ -19,7 +19,7 @@ function App() {
   const [selectedCard, setSelectedCard] = React.useState({});
 
   const [currentUser, setCurrentUser] = React.useState({});
-  const [cards, setCards] = React.useState({});
+  const [cards, setCards] = React.useState([]);
 
   const closeAllPopups = () => {
     setPopupProfileOpen(false);
@@ -131,12 +131,12 @@ function App() {
         <EditAvatar
           handleClose={closeAllPopups}
           open={isPopupEditAvatar}
-          updateAvatar={onSubmitEditAvatar}
+          onUpdateAvatar={onSubmitEditAvatar}
         />
         <EditProfile
           handleClose={closeAllPopups}
           open={isPopupProfileOpen}
-          updateUser={onSubmitEditProfile}
+          onUpdateUser={onSubmitEditProfile}
         />
         <AddPlacePopUp
           handleClose={closeAllPopups}

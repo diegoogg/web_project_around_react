@@ -4,9 +4,9 @@ import UserContext from "./UserContext";
 export default function Card({
   name,
   link,
-  handleClick,
+  handleCardClick,
   handleDeleteCard,
-  handleAddlike,
+  handleCardlike,
   likes,
   _id,
   owner,
@@ -14,15 +14,15 @@ export default function Card({
   const user = React.useContext(UserContext);
 
   const hasLike = () => {
-    return likes.some((like) => like._id === this._user._id);
+    return likes.some((like) => like._id === user._id);
   };
 
   const cardOwner = () => {
     return owner._id === user._id;
   };
 
-  const click = () => {
-    handleClick({ name, link, _id });
+  const handleClick = () => {
+    handleCardClick({ name, link, _id });
   };
 
   const deleteCard = () => {
@@ -30,7 +30,7 @@ export default function Card({
   };
 
   function handleLike() {
-    handleAddlike({ _id }, hasLike());
+    handleCardlike({ _id }, hasLike());
   }
 
   return (
@@ -40,7 +40,7 @@ export default function Card({
           className="elements__image"
           alt={name}
           src={link}
-          onClick={click}
+          onClick={handleClick}
         />
         {cardOwner() && (
           <button

@@ -2,7 +2,7 @@ import React from "react";
 import PopUpWithForm from "./PopUpWithForm";
 import UserContext from "./UserContext";
 
-export default function EditProfile({ handleClose, open, updateUser }) {
+export default function EditProfile({ handleClose, open, onUpdateUser }) {
   const [name, setName] = React.useState("");
   const [description, setDescription] = React.useState("");
 
@@ -15,7 +15,7 @@ export default function EditProfile({ handleClose, open, updateUser }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    updateUser({
+    onUpdateUser({
       name,
       about: description,
     });

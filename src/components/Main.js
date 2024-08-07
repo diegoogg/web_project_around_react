@@ -5,6 +5,8 @@ import "../blocks/elements.css";
 import Card from "./Card";
 import UserContext from "./UserContext";
 import React from "react";
+import EditButton from "../images/Edit-Button.png";
+import AddButton from "../images/add-button.png";
 
 function Main({
   handleEditAvatar,
@@ -40,7 +42,7 @@ function Main({
           >
             //{" "}
             <img
-              src="<%=require('../images/Edit-Button.png')%>"
+              src={EditButton}
               alt="edit button"
               className="profile__edit-img"
             />
@@ -49,11 +51,7 @@ function Main({
           <p className="profile__description">{currentUser.about}</p>
         </div>
         <button type="button" className="profile__add" onClick={handleAddPlace}>
-          <img
-            src="<%=require('../images/add-button.png')%>"
-            alt="add button"
-            className="profile__add-img"
-          />
+          <img src={AddButton} alt="add button" className="profile__add-img" />
         </button>
       </section>
       <section className="elements">

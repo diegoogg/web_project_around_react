@@ -1,0 +1,15 @@
+.header {
+  max-width: 882px;
+  margin: 0 auto;
+  border-bottom: 1px solid #545454;
+  padding: 0px 0px 40px 0px;
+}
+.header__logo {
+  margin: 45px auto auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 881px) {
+  .header__logo {
+    margin: 45px auto auto 35px;
+  }
+}
