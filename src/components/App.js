@@ -64,6 +64,12 @@ function App() {
           setCards(cardsData);
         });
       });
+    } else {
+      return api.like(card._id).then(() => {
+        api.getCards().then((cardsData) => {
+          setCards(cardsData);
+        });
+      });
     }
   };
 

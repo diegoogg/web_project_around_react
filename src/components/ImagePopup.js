@@ -5,7 +5,7 @@ export default function ImagePopup({
   selectedCard,
 }) {
   return (
-    <div className={`popup ${classId} ${open ? "popup_open" : ""}`}>
+    <div className={`popup ${classId} ${open ? "popup_opened" : ""}`}>
       <div className="popup__form"></div>
       <div className="popup__form-image">
         <button className="popup__close" onClick={handleClose}></button>

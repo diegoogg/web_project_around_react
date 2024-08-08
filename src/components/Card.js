@@ -52,7 +52,7 @@ export default function Card({
         <figcaption className="elements__image-description">
           <p className="elements__image-description-title">{name}</p>
           <button
-            className={`elements__image-like-btn ${
+            className={`elements__image-like-btn${
               hasLike() ? "elements__image-like-btn-active" : ""
             }`}
             type="button"
