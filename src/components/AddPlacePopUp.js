@@ -17,7 +17,7 @@ export default function AddPlacePopUp({ open, handleClose, onSubmit }) {
         required
         minLength="2"
         maxLength="30"
-        name="place"
+        name="name"
       />
       <span className="popup__error popup__error_type_place"></span>
       <input
@@ -25,7 +25,7 @@ export default function AddPlacePopUp({ open, handleClose, onSubmit }) {
         placeholder="Enlace a la imagen"
         className="popup__input popup__input_src"
         required
-        name="url"
+        name="link"
       />
       <span className="popup__error popup__error_type_url"></span>
     </PopUpWithForm>

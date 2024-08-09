@@ -40,7 +40,6 @@ function Main({
             className="profile__edit-button"
             onClick={handleEditProfile}
           >
-            //{" "}
             <img
               src={EditButton}
               alt="edit button"

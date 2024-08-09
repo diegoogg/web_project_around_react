@@ -53,7 +53,7 @@ export default function Card({
           <p className="elements__image-description-title">{name}</p>
           <button
             className={`elements__image-like-btn${
-              hasLike() ? "elements__image-like-btn-active" : ""
+              hasLike() ? "elements__image-like-btn-active" : " "
             }`}
             type="button"
             onClick={handleLike}
