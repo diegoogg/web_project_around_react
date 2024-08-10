@@ -1,12 +1,13 @@
 import React from "react";
 import UserContext from "./UserContext";
+import "../blocks/elements.css";
 
 export default function Card({
   name,
   link,
   handleCardClick,
   handleDeleteCard,
-  handleCardlike,
+  handleCardLike,
   likes,
   _id,
   owner,
@@ -30,7 +31,7 @@ export default function Card({
   };
 
   function handleLike() {
-    handleCardlike({ _id }, hasLike());
+    handleCardLike({ _id }, hasLike());
   }
 
   return (
@@ -52,7 +53,7 @@ export default function Card({
         <figcaption className="elements__image-description">
           <p className="elements__image-description-title">{name}</p>
           <button
-            className={`elements__image-like-btn${
+            className={`elements__image-like-btn ${
               hasLike() ? "elements__image-like-btn-active" : " "
             }`}
             type="button"
