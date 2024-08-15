@@ -73,7 +73,8 @@ function App() {
     }
   };
 
-  const onSubmitDeleteCard = () => {
+  const onSubmitDeleteCard = (event) => {
+    event.preventDefault();
     return api.deleteCard(selectedCard._id).then(() => {
       closeAllPopups();
       setCards(cards.filter((card) => card._id !== selectedCard._id));
